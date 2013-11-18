@@ -28,6 +28,9 @@
 // default NO
 @property(assign, nonatomic) BOOL stepValueContinuously;
 
+// A handle to the step animation duration, by default it is 0.25 seconds.
+@property(assign, nonatomic) CGFloat stepAnimationDuration;
+
 // defafult YES, indicating whether changes in the sliders value generate continuous update events.
 @property(assign, nonatomic) BOOL continuous;
 

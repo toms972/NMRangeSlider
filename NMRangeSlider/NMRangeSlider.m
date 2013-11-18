@@ -95,6 +95,7 @@ NSUInteger DeviceSystemMajorVersion() {
     _upperMinimumValue = NAN;
     _upperHandleHidden = NO;
     _lowerHandleHidden = NO;
+    _stepAnimationDuration = 0.25f;
 }
 
 // ------------------------------------------------------------------------------------------------------
@@ -182,7 +183,9 @@ NSUInteger DeviceSystemMajorVersion() {
     
     if(animated)
     {
-        [UIView animateWithDuration:0.25  delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState
+        [UIView animateWithDuration:_stepAnimationDuration
+                              delay:0.0f
+                            options:UIViewAnimationOptionBeginFromCurrentState
                          animations:^{
                              
                              setValuesBlock();
